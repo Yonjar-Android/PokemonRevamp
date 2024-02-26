@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PokemonRevamp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.PokemonRevamp" parent="Base.Theme.PokemonRevamp" />
+
+
+    SPLASH SCREEN
+
+    <style name="App.Theme.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#222</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/pokelogo</item>
+        <item name="windowSplashScreenAnimationDuration">1500</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.PokemonRevamp</item>
+    </style>
+
+</resources>

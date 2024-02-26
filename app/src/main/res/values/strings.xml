@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PokedexApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pokemon">Pokemon</string>
+    <string name="searchPokemon">Search a pokemon</string>
+    <string name="weight">Weight:\n %.1f Kg</string>
+    <string name="height">Height:\n %.1f Cm</string>
+
+
+    String Stats
+
+    <string name="statHP">HP</string>
+    <string name="statAttack">Attack </string>
+    <string name="statDefense">Defense</string>
+    <string name="statSpeAttack">SpeAttack</string>
+    <string name="statSpeDefense">SpeDefense</string>
+    <string name="statSpeed">Speed</string>
+
+    Menu
+
+    <string name="randomMenu">Random</string>
+    <string name="searchMenu">Search</string>
+    <string name="listMenu">List</string>
+
+
+</resources>

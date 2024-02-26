@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    Stats Colors
+
+    <color name="colorHP">#06F30A</color>
+    <color name="colorAttack">#CA0707</color>
+    <color name="colorDefense">#FAF500</color>
+    <color name="colorSpeAttack">#DD4E02</color>
+    <color name="colorSpeDefense">#FFC000</color>
+    <color name="colorSpeed">#079CFF</color>
+
+    Type Colors
+
+    <color name="colorFire">#F08030</color>
+    <color name="colorWater"> #6890F0</color>
+    <color name="colorGrass">#78C850</color>
+    <color name="colorIce">#98D8D8</color>
+    <color name="colorGhost">#B993F8</color>
+    <color name="colorGround">#E0C068</color>
+    <color name="colorRock">#B8A038</color>
+    <color name="colorBug">#A8B820</color>
+    <color name="colorFairy">#EE99AC</color>
+    <color name="colorDragon">#8556F5</color>
+    <color name="colorFlying">#A890F0</color>
+    <color name="colorFighting">#CC4E47</color>
+    <color name="colorDark">#705848</color>
+    <color name="colorPsychic">#F85888</color>
+    <color name="colorNormal">#A8A878</color>
+    <color name="colorSteel">#B8B8D0</color>
+    <color name="colorPoison">#CC49CC</color>
+    <color name="colorElectric">#F8D030</color>
+
+</resources>

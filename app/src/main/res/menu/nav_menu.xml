@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+    android:id="@+id/randomPokemonFragment"
+    android:title="@string/randomMenu"
+        android:icon="@drawable/pokelogo"
+    />
+
+    <item
+        android:id="@+id/searchPokemonFragment"
+        android:title="@string/searchMenu"
+        android:icon="@drawable/ic_search"
+        />
+
+    <item
+        android:id="@+id/pokemonListFragment2"
+        android:title="@string/listMenu"
+        android:icon="@drawable/ic_list"
+        />
+
+</menu>
