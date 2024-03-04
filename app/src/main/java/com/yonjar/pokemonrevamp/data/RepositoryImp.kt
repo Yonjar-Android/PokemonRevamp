@@ -20,7 +20,9 @@ class RepositoryImp @Inject constructor(private val service: PokemonService) : R
     override suspend fun getRandomPokemon(): PokemonName? {
         runCatching {
             service.getPokemonList()
-        }.onFailure { println("${it.message}") }
+        }.onFailure { println("${it.message}")
+            return null
+        }
             .onSuccess {  return it.pokemonList.random() }
         return null
     }

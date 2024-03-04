@@ -16,13 +16,6 @@
 
     >
 
-    <ImageView
-        android:id="@+id/ivConfig"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="top|end"
-        android:padding="10dp"
-        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,14 +26,6 @@
         android:textStyle="bold"
         />
 
-    <ImageView
-        android:id="@+id/ivBack"
-        android:layout_width="50dp"
-        android:layout_height="60dp"
-        android:layout_gravity="top|start"
-        android:padding="10dp"
-
-        />
 
 </FrameLayout>
 

@@ -25,7 +25,7 @@ class RandomPokemonViewModel @Inject constructor(private val repositoryImp: Repo
                      _state.value = RandomPokemonState.Success(repositoryImp.getPokemonSimpleInfo(response.name)!!)
                  }
                  else{
-                     _state.value = RandomPokemonState.Error("Response is null")
+                     _state.value = RandomPokemonState.Error("Response was null")
                  }
              }
 

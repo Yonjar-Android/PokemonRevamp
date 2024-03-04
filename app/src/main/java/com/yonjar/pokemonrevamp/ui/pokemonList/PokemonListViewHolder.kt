@@ -17,12 +17,9 @@ class PokemonListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) 
         Glide.with(context).load(pokemon.spriteHome).into(binding.ivPokemon)
         binding.tvPokemonName.text = pokemon.name.replaceFirst(pokemon.name[0],pokemon.name[0].uppercaseChar())
 
-
-
         val colorType = PokemonUtils.getTypeColor(pokemon.firstType)
 
         binding.layoutCard.setBackgroundColor(ContextCompat.getColor(context,colorType))
-
 
         itemView.setOnClickListener {
             goDetail(pokemon.name)

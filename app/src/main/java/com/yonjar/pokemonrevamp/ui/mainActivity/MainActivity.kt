@@ -1,5 +1,6 @@
 package com.yonjar.pokemonrevamp.ui.mainActivity
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -33,8 +34,5 @@ class MainActivity : AppCompatActivity() {
 
         navMenu.setupWithNavController(navController)
 
-        binding.ivBack.setOnClickListener {
-
-        }
     }
 }
