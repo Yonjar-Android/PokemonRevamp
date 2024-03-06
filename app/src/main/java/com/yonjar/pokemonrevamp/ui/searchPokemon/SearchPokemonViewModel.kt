@@ -20,8 +20,9 @@ class SearchPokemonViewModel @Inject constructor(private val repositoryImp: Repo
     fun searchPokemon(pokemonName:String?){
         _state.value = SearchPokemonState.Loading
         viewModelScope.launch {
-            val pokemonResponse = pokemonName?.let { repositoryImp.getPokemonSimpleInfo(it) }
             try {
+            val pokemonResponse = pokemonName?.let { repositoryImp.getPokemonSimpleInfo(it) }
+
                 if(pokemonResponse != null){
                     _state.value = SearchPokemonState.Success(pokemonResponse)
                 }else{
