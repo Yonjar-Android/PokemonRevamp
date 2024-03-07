@@ -40,7 +40,8 @@ class SearchPokemonViewModelTest{
 
         coEvery { repositoryImp.getPokemonSimpleInfo("bulbasaur") } returns PokemonMotherObject.pokemonSimpleModel
 
-
+        // El delay es necesario para que le de tiempo al viewModel a actualizar su estado,
+        // de lo contrario el test dará error ya que todavía no lo habrá actualizado y no habrán coincidencias
         searchPokemonViewModel.searchPokemon("bulbasaur")
 
 

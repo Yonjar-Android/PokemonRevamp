@@ -15,10 +15,28 @@ import com.yonjar.pokemonrevamp.domain.models.PokemonSimpleModel
 
 object PokemonMotherObject {
 
-    private val pokemonList = listOf(
+      val pokemonList = listOf(
         PokemonName("bulbasaur"),
         PokemonName("ivysaur"),
         PokemonName("venusaur")
+    )
+
+     val pokemonSimpleModelList = listOf(
+        PokemonSimpleModel("bulbasaur",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/1.gif",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/1.png",
+            "grass"),
+        PokemonSimpleModel("ivysaur",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/2.gif",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/2.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/2.png",
+            "grass"),
+        PokemonSimpleModel("venusaur",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/3.gif",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/3.png",
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/3.png",
+            "grass")
     )
 
     val pokemonResponse = ResultsResponse(

@@ -17,8 +17,6 @@ class PokemonListViewModel @Inject constructor(private val repositoryImp: Reposi
     private val _state = MutableStateFlow<PokemonListState>(PokemonListState.Loading)
     var state:StateFlow<PokemonListState> = _state
 
-
-
     init{
          var counter = 0
          var counter2 = 10

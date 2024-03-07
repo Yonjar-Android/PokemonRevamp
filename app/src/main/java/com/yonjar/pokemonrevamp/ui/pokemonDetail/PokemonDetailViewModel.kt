@@ -18,9 +18,8 @@ class PokemonDetailViewModel @Inject constructor(private val repositoryImp: Repo
     fun getDetail(name:String){
         _state.value = PokemonDetailState.Loading
         viewModelScope.launch {
-            val pokemonResponse = repositoryImp.getPokemonFullData(name)
-
             try {
+            val pokemonResponse = repositoryImp.getPokemonFullData(name)
                 if (pokemonResponse != null){
                     _state.value = PokemonDetailState.Success(pokemonResponse)
                 } else{
