@@ -31,12 +31,11 @@ class RepositoryImpTest{
 
     @Test
     fun `getAllPokemon should return a full list of pokemon names`() = runBlocking {
-        var response: List<PokemonName>? = null
         //Given
         coEvery { pokemonService.getPokemonList() } returns PokemonMotherObject.pokemonResponse
 
         //When
-        response = repositoryImp.getAllPokemon()
+        val response: List<PokemonName>? = repositoryImp.getAllPokemon()
 
         //Then
         coVerify(exactly = 1) { pokemonService.getPokemonList() }
@@ -46,12 +45,11 @@ class RepositoryImpTest{
 
     @Test
     fun `getAllPokemon should return null on service failure`() = runBlocking {
-        var response: List<PokemonName>? = null
         //Given
         coEvery { pokemonService.getPokemonList() } throws RuntimeException("Service unavailable")
 
         //When
-        response = repositoryImp.getAllPokemon()
+        val response: List<PokemonName>? = repositoryImp.getAllPokemon()
 
         //Then
         assertNull(response)
@@ -60,14 +58,13 @@ class RepositoryImpTest{
 
     @Test
     fun `getRandomPokemon should return a random pokemon name from the full list`() = runBlocking {
-        var response:PokemonName? = null
 
         //Given
 
         coEvery { pokemonService.getPokemonList() } returns PokemonMotherObject.pokemonResponse
 
         // When
-        response = repositoryImp.getRandomPokemon()
+        val response:PokemonName? = repositoryImp.getRandomPokemon()
 
         //Then
         coVerify(exactly = 1) { pokemonService.getPokemonList() }
@@ -77,14 +74,13 @@ class RepositoryImpTest{
 
     @Test
     fun `getRandomPokemon should return null on service failure`() = runBlocking {
-        var response:PokemonName? = null
 
         //Given
 
         coEvery { pokemonService.getPokemonList() } throws RuntimeException("Service unavailable")
 
         // When
-        response = repositoryImp.getRandomPokemon()
+       val response:PokemonName? = repositoryImp.getRandomPokemon()
 
         //Then
         assertNull(response)
@@ -93,14 +89,13 @@ class RepositoryImpTest{
 
     @Test
     fun `getPokemonFullData should return a full data for a Pokemon name passed as a parameter`() = runBlocking {
-        var response:PokemonFullData? = null
 
         //Given
         coEvery { pokemonService.getSimplePokemon("bulbasaur") } returns PokemonMotherObject.pokemonFullResponse
 
         //When
 
-         response = repositoryImp.getPokemonFullData("bulbasaur")
+        val response:PokemonFullData? = repositoryImp.getPokemonFullData("bulbasaur")
 
         // Then
         coVerify(exactly = 1) { pokemonService.getSimplePokemon("bulbasaur") }
@@ -112,14 +107,13 @@ class RepositoryImpTest{
 
     @Test
     fun `getPokemonFullData should return null on a service failure`() = runBlocking {
-        var response:PokemonFullData? = null
 
         //Given
         coEvery { pokemonService.getSimplePokemon("bulbasaur") } throws RuntimeException("Service unavailable")
 
         //When
 
-        response = repositoryImp.getPokemonFullData("bulbasaur")
+        val response:PokemonFullData? = repositoryImp.getPokemonFullData("bulbasaur")
 
         // Then
         assertNull(response)
@@ -128,13 +122,12 @@ class RepositoryImpTest{
 
     @Test
     fun `getSimpleInfo should return a PokemonSimpleModel for a Pokemon name passed as a parameter`() = runBlocking {
-        var response:PokemonSimpleModel? = null
 
         // Given
         coEvery { pokemonService.getSimplePokemon("bulbasaur") } returns PokemonMotherObject.pokemonFullResponse
 
         // When
-        response = repositoryImp.getPokemonSimpleInfo("bulbasaur")
+        val response:PokemonSimpleModel? = repositoryImp.getPokemonSimpleInfo("bulbasaur")
 
         //Then
         assertNotNull(response)
@@ -144,13 +137,12 @@ class RepositoryImpTest{
 
     @Test
     fun `getSimpleInfo should return a null on a service failure`() = runBlocking {
-        var response:PokemonSimpleModel? = null
 
         // Given
         coEvery { pokemonService.getSimplePokemon("bulbasaur") } throws RuntimeException("Service unavailable")
 
         // When
-        response = repositoryImp.getPokemonSimpleInfo("bulbasaur")
+       val response:PokemonSimpleModel? = repositoryImp.getPokemonSimpleInfo("bulbasaur")
 
         //Then
         assertNull(response)

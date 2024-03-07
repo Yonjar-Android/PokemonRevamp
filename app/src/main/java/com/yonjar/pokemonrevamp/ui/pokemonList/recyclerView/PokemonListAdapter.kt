@@ -1,9 +1,9 @@
-package com.yonjar.pokemonrevamp.ui.pokemonList
+package com.yonjar.pokemonrevamp.ui.pokemonList.recyclerView
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.yonjar.pokemonrevamp.R
 import com.yonjar.pokemonrevamp.domain.models.PokemonSimpleModel
@@ -31,9 +31,11 @@ class PokemonListAdapter(
         holder.render(pokemons[position], context, goDetail)
     }
 
-    fun updateList(list: List<PokemonSimpleModel>) {
-        pokemons = list
-        notifyDataSetChanged()
+    fun updateList(newList: List<PokemonSimpleModel>) {
+        val pokemonDiffUtil = PokemonListDiffUtil(pokemons,newList)
+        val result = DiffUtil.calculateDiff(pokemonDiffUtil)
+        pokemons = newList
+        result.dispatchUpdatesTo(this)
     }
 
 }

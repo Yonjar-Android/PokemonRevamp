@@ -1,4 +1,4 @@
-package com.yonjar.pokemonrevamp.ui.pokemonList
+package com.yonjar.pokemonrevamp.ui.pokemonList.recyclerView
 
 import android.content.Context
 import android.view.View
