@@ -2,7 +2,6 @@ package com.yonjar.pokemonrevamp.ui.pokemonDetail
 
 import com.yonjar.pokemonrevamp.data.RepositoryImp
 import com.yonjar.pokemonrevamp.motherobject.PokemonMotherObject
-import com.yonjar.pokemonrevamp.ui.searchPokemon.SearchPokemonViewModel
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
@@ -15,8 +14,8 @@ import kotlinx.coroutines.test.setMain
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import org.junit.jupiter.api.Assertions.*
-import java.lang.Exception
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class PokemonDetailViewModelTest{
@@ -24,7 +23,7 @@ class PokemonDetailViewModelTest{
     @MockK
     lateinit var repositoryImp: RepositoryImp
 
-    lateinit var pokemonDetailViewModel: PokemonDetailViewModel
+    private lateinit var pokemonDetailViewModel: PokemonDetailViewModel
 
     @Before
     fun setup() {

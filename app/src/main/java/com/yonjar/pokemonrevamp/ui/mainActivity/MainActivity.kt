@@ -1,13 +1,10 @@
 package com.yonjar.pokemonrevamp.ui.mainActivity
 
-import android.app.Dialog
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.yonjar.pokemonrevamp.R
 import com.yonjar.pokemonrevamp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint

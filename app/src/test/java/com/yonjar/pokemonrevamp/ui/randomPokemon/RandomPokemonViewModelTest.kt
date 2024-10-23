@@ -51,7 +51,6 @@ class RandomPokemonViewModelTest{
 
         val state = randomPokemonViewModel.state.value
 
-
         assertTrue(state is RandomPokemonState.Success)
         assertEquals((state as RandomPokemonState.Success).pokemon.name,PokemonMotherObject.pokemonName.name)
     }
